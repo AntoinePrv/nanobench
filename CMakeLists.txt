@@ -84,7 +84,7 @@ if (NANOBENCH_STANDALONE_PROJECT)
 
 
     include(GNUInstallDirs)
-    set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/cmake)
+    set(NB_INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
     set(INSTALL_LIBDIR ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME})
 
     # Install library target
@@ -98,8 +98,6 @@ if (NANOBENCH_STANDALONE_PROJECT)
     install(
       TARGETS nanobench
       EXPORT install_targets
-      LIBRARY DESTINATION ${INSTALL_LIBDIR}
-      ARCHIVE DESTINATION ${INSTALL_LIBDIR}
     )
 
     # Install targets file
